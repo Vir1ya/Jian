@@ -1,0 +1,34 @@
+{
+  "name": "jian",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "缄：部署在 Cloudflare Workers 上的个人文字站，带双链与钥匙锁",
+  "scripts": {
+    "postinstall": "node scripts/setup.mjs",
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "push": "node cli/jian.ts push",
+    "push:local": "node cli/jian.ts push --local",
+    "check": "node cli/jian.ts check",
+    "key": "node cli/jian.ts key",
+    "test": "node --test test/blocks.test.ts",
+    "verify": "node test/verify.ts",
+    "typecheck": "tsc -p ."
+  },
+  "dependencies": {
+    "markdown-it": "^14.1.0",
+    "yaml": "^2.6.0"
+  },
+  "devDependencies": {
+    "@chinese-fonts/zqfs": "^3.0.0",
+    "@cloudflare/workers-types": "^5.20261110.1",
+    "@types/markdown-it": "^14.1.2",
+    "@types/node": "^22.0.0",
+    "typescript": "^5.6.0",
+    "wrangler": "^4.160.0"
+  },
+  "engines": {
+    "node": ">=22.18"
+  }
+}

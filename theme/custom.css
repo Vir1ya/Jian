@@ -1,0 +1,49 @@
+/* 这里写你自己的样式。所有块都是 .blk-块名，参数在 data-参数名 上。
+   默认主题的颜色变量：--bg --ink --muted --rule --rule2 --redlink */
+
+/* :::角色卡 —— 左边立绘，右边资料 */
+.blk-角色卡 {
+  display: grid;
+  grid-template-columns: 128px minmax(0, 1fr);
+  gap: 0 28px;
+  border-top: 1px solid var(--ink);
+  border-bottom: 1px solid var(--ink);
+  padding: 24px 0;
+}
+.blk-角色卡 > p:has(img) { grid-row: span 9; margin: 0; }
+.blk-角色卡 img { width: 128px; display: block; }
+.blk-角色卡 h2, .blk-角色卡 h3 { margin: 0; font-size: 1.6em; letter-spacing: .2em; }
+.blk-角色卡 ul { list-style: none; padding: 0; margin: 12px 0 0; font-size: .86em; }
+.blk-角色卡 li { border-top: 1px solid var(--rule); padding: 6px 0; margin: 0; }
+.blk-角色卡 p { margin: 4px 0 0; color: var(--muted); font-size: .8em; letter-spacing: .2em; }
+.blk-栅格 > .blk-角色卡 { grid-template-columns: minmax(0, 1fr); text-align: center; }
+.blk-栅格 > .blk-角色卡 > p:has(img) { grid-row: auto; margin-bottom: 12px; }
+.blk-栅格 > .blk-角色卡 img { margin: 0 auto; }
+
+/* :::信笺 署名=… 日期=… —— 竖排八行笺（结构见 theme/blocks/信笺.html） */
+.blk-信笺 {
+  writing-mode: vertical-rl;
+  height: 320px;
+  overflow-x: auto;
+  padding: 28px 0;
+  font-size: 19px;
+  line-height: 44px;
+  letter-spacing: .14em;
+  background: repeating-linear-gradient(to left, transparent 0 43px, color-mix(in srgb, var(--redlink) 45%, transparent) 43px 44px);
+  border: 1px solid color-mix(in srgb, var(--redlink) 45%, transparent);
+  border-right: 0;
+}
+.blk-信笺 p { margin: 0; }
+/* 署名行由 theme/blocks/信笺.html 生成，署名会自动链到那个角色的页面 */
+.blk-信笺 .sig { text-align: end; color: var(--muted); }
+.blk-信笺 .sig a { color: inherit; }
+
+/* :::设定 —— 一个安静的方框，适合并排对照 */
+.blk-设定 { border-top: 1px solid var(--rule2); padding-top: 12px; }
+.blk-设定 h3 { margin-top: 0; }
+
+/* 想把脚注挪到页边，像古籍里的眉批？取消下面的注释：
+.footnotes { display: none; }
+.fn-inline { display: block; float: right; clear: right; width: 150px; margin-right: -190px; font-size: 13px; line-height: 1.8; color: var(--muted); }
+.fn-inline sup { margin-right: .3em; }
+*/

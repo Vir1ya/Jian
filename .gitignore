@@ -1,0 +1,24 @@
+node_modules/
+.wrangler/
+
+# Local secrets
+.dev.vars*
+.env
+.env.*
+!.env.example
+
+# Generated assets and local archives
+public/_f/
+backups/
+_to_delete/
+
+# OS/editor and debug files
+.DS_Store
+Thumbs.db
+npm-debug.log*
+
+# Private writing and illustrations: keep local, do not publish with source
+content/*
+!content/.gitkeep
+assets/*
+!assets/.gitkeep

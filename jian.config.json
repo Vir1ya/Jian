@@ -1,0 +1,60 @@
+{
+  "title": "缄",
+  "subtitle": "一些写给自己的，和一些写给你的。\n角色、设定、随笔，都放在这里。",
+  "url": "",
+  "nav": [
+    {
+      "text": "目录",
+      "href": "/_all"
+    },
+    {
+      "text": "标签",
+      "href": "/_tags"
+    },
+    {
+      "text": "图谱",
+      "href": "/_graph"
+    },
+    {
+      "text": "搜索",
+      "href": "/_search"
+    },
+    {
+      "text": "启封",
+      "href": "/_unlock"
+    }
+  ],
+  "theme": {
+    "bg": "#ffffff",
+    "ink": "#1d1d1b",
+    "muted": "#6b6b66",
+    "rule": "#e6e6e2",
+    "rule2": "#c6c6c0",
+    "redlink": "#9a3324",
+    "dark": {
+      "bg": "#141414",
+      "ink": "#e6e4df",
+      "muted": "#9a9893",
+      "rule": "#2a2a28",
+      "rule2": "#4a4a47",
+      "redlink": "#d98a76"
+    },
+    "darkMode": "auto",
+    "size": 18,
+    "leading": 2,
+    "measure": "36em",
+    "titleSpacing": ".12em"
+  },
+  "webFont": true,
+  "unlockDays": 7,
+  "date": "cn",
+  "home": {
+    "recent": 10
+  },
+  "markdown": {
+    "breaks": true
+  },
+  "blocks": 1,
+  "sanitizeHtml": false,
+  "footer": "缄"
+}

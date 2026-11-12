@@ -1,0 +1,12 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "jian",
+  "main": "worker/src/index.ts",
+  "compatibility_date": "2026-10-01",
+  // 字体等静态文件，随 wrangler deploy 一起上传
+  "assets": { "directory": "./public" },
+  // 数据库：第一次 deploy 时 wrangler 会自动创建，并把 database_id 写回这里
+  "d1_databases": [{ "binding": "DB", "database_name": "jian" }]
+  // 图片默认存在 D1 里（单张不超过 1.9 MB）。想放大图，就开通 R2 后取消下面这行的注释：
+  // ,"r2_buckets": [{ "binding": "BUCKET", "bucket_name": "jian" }]
+}
